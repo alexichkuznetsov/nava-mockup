@@ -25,6 +25,9 @@ body {
   margin: 0 auto;
   padding: 0 1.5rem; }
 
+.u-text-center {
+  text-align: center; }
+
 .u-mb-sm {
   margin-bottom: 2rem; }
 
@@ -97,16 +100,27 @@ body {
   padding: 1.2rem 4.2rem;
   border: 1px solid #f9fafe;
   border-radius: 5px;
-  transition: background-color .2s ease, color .2s ease; }
+  transition: background-color .2s ease, border .2s ease, color .2s ease; }
   .btn:link:hover, .btn:visited:hover {
     background-color: #f9fafe;
     color: #343434; }
 
 .btn--dark:link, .btn--dark:visited {
   color: #343434;
-  border: 1px solid #bdbdbd; }
+  border: 1px solid #bdbdbd;
+  padding: 2rem 4.2rem; }
   .btn--dark:link:hover, .btn--dark:visited:hover {
     background-color: #bdbdbd; }
+
+.btn--red:link, .btn--red:visited {
+  color: #fff;
+  background-color: #e7434e;
+  border: 1px solid #e7434e;
+  padding: 2rem 4.2rem; }
+  .btn--red:link:hover, .btn--red:visited:hover {
+    background-color: #fff;
+    border: 1px solid #fff;
+    color: #e7434e; }
 
 .heading-primary {
   text-align: center;
@@ -269,3 +283,23 @@ body {
       background: url("../img/icons/icon-boat.svg") no-repeat center/cover; }
     .destination__boats-count:hover {
       background-color: #e53541; }
+
+.section-cta {
+  padding-top: 18rem;
+  padding-bottom: 16rem;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../img/cta-bg.png");
+  background-size: cover;
+  background-position: top;
+  text-align: center;
+  text-transform: uppercase; }
+  .section-cta__title {
+    font-weight: 700;
+    font-size: 7.2rem;
+    letter-spacing: 5px;
+    margin-bottom: .7rem; }
+  .section-cta__sub-title {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    font-size: 2.4rem;
+    letter-spacing: 3px;
+    margin-bottom: 10rem; }

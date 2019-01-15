@@ -107,6 +107,7 @@
         border-radius: 5px;
         
         transition: background-color .2s ease,
+                    border .2s ease,
                     color .2s ease;
 
         &:hover {
@@ -120,8 +121,25 @@
         color: $color-font-dark;
         border: 1px solid $color-grey-light-2;
 
+        padding: 2rem 4.2rem;
+
         &:hover {
             background-color: $color-grey-light-2;
+        }
+    }
+
+    &--red:link,
+    &--red:visited {
+        color: #fff;
+        background-color: $color-red;
+        border: 1px solid $color-red;
+
+        padding: 2rem 4.2rem;
+
+        &:hover {
+            background-color: #fff;
+            border: 1px solid #fff;
+            color: $color-red;
         }
     }
 }
@@ -376,5 +394,35 @@
         &:hover {
             background-color: darken($color-red, 3%);
         }
+    }
+}
+
+// Section - CTA
+.section-cta {
+    padding-top: 18rem;
+    padding-bottom: 16rem;
+
+    background-image: linear-gradient(rgba(#000, .4), rgba(#000, .4)), url('../img/cta-bg.png');
+    background-size: cover;
+    background-position: top;
+
+    text-align: center;
+    text-transform: uppercase;
+
+    &__title {
+        font-weight: 700;
+        font-size: 7.2rem;
+        letter-spacing: 5px;
+
+        margin-bottom: .7rem;
+    }
+
+    &__sub-title {
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 300;
+        font-size: 2.4rem;
+        letter-spacing: 3px;
+
+        margin-bottom: 10rem;
     }
 }
