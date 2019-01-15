@@ -1,0 +1,173 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,700");
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,700");
+* {
+  margin: 0;
+  padding: 0; }
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit; }
+
+html {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  font-size: 62.5%;
+  color: #f9fafe;
+  text-rendering: optimizeLegibility; }
+
+body {
+  box-sizing: border-box; }
+
+/*
+    Components
+*/
+.main-header {
+  position: relative;
+  min-height: 840px;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../img/header-bg.png");
+  background-size: cover;
+  background-position: center; }
+  .main-header__container {
+    max-width: 150rem;
+    margin: 0 auto;
+    padding: 3rem 0;
+    display: flex;
+    align-items: center; }
+  .main-header__logo {
+    margin-right: auto;
+    font-size: 2.4rem;
+    color: inherit;
+    text-decoration: none;
+    text-transform: uppercase; }
+  .main-header__logo-img {
+    display: block;
+    width: 100%; }
+  .main-header__nav {
+    margin-right: 3.5rem; }
+  .main-header__heading {
+    margin-top: 18.5rem;
+    margin-bottom: 8rem; }
+  .main-header__stats-list {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    width: 100%;
+    max-width: 120rem; }
+
+.nav-list {
+  list-style: none;
+  display: flex; }
+  .nav-list__item:not(:last-child) {
+    margin-right: 4.5rem; }
+  .nav-list__link:link, .nav-list__link:visited {
+    font-weight: 700;
+    font-size: 1.6rem;
+    color: #f9fafe;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: .3px;
+    transition: color .2s ease; }
+  .nav-list__link:hover {
+    color: #dcdde1; }
+
+.btn:link, .btn:visited {
+  font-weight: 700;
+  font-size: 1.6rem;
+  color: #f9fafe;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 1.2rem 4.2rem;
+  border: 1px solid #f9fafe;
+  border-radius: 5px;
+  transition: background-color .2s ease, color .2s ease; }
+
+.btn:hover {
+  background-color: #f9fafe;
+  color: #343434; }
+
+.heading-primary {
+  text-align: center;
+  text-transform: uppercase; }
+  .heading-primary > * {
+    display: block; }
+  .heading-primary--top {
+    font-weight: 700;
+    font-size: 7.2rem;
+    letter-spacing: 5px; }
+  .heading-primary--sub {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    font-size: 3rem;
+    letter-spacing: 2px; }
+
+.search-form {
+  max-width: 78rem;
+  margin: 0 auto;
+  display: flex;
+  border-radius: 5px;
+  overflow: hidden; }
+  .search-form__input {
+    flex: 7;
+    padding: 2.4rem 3rem;
+    border: none;
+    background-color: #fff;
+    transition: background-color .2s ease;
+    font: inherit;
+    font-size: 1.4rem;
+    color: #717171;
+    text-transform: uppercase;
+    letter-spacing: .5px; }
+    .search-form__input:focus {
+      outline: none;
+      background-color: #ededed; }
+  .search-form__btn {
+    flex: 3;
+    border: none;
+    background-color: #e7434e;
+    cursor: pointer;
+    transition: background-color .2s ease;
+    font: inherit;
+    font-weight: 700;
+    font-size: 1.6rem;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: .3px;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .search-form__btn::before {
+      content: '';
+      width: 1.8rem;
+      height: 1.8rem;
+      margin-right: 1.2rem;
+      background-image: url("../img/icons/icon-boat.svg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center; }
+    .search-form__btn:hover {
+      background-color: #e53541; }
+
+.stats-list {
+  list-style: none;
+  padding: 3rem 0;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.1);
+  display: flex; }
+  .stats-list__item {
+    flex: 1;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center; }
+    .stats-list__item:not(:last-child) {
+      border-right: 1px solid #d4d4d4; }
+  .stats-list__value {
+    font-weight: 700;
+    font-size: 3rem;
+    color: #343434;
+    margin-bottom: .7rem; }
+  .stats-list__unit {
+    font-weight: 400;
+    font-size: 1.8rem;
+    color: #717171; }
