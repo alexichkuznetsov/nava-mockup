@@ -1,5 +1,6 @@
 @import 'variables';
 @import 'base';
+@import 'utilities';
 
 /*
     Components
@@ -92,6 +93,8 @@
 .btn {
     &:link,
     &:visited {
+        display: inline-block;
+
         font-weight: 700;
         font-size: 1.6rem;
         color: $color-font-primary;
@@ -105,11 +108,21 @@
         
         transition: background-color .2s ease,
                     color .2s ease;
+
+        &:hover {
+            background-color: $color-font-primary;
+            color: $color-font-dark;
+        }
     }
 
-    &:hover {
-        background-color: $color-font-primary;
+    &--dark:link,
+    &--dark:visited {
         color: $color-font-dark;
+        border: 1px solid $color-grey-light-2;
+
+        &:hover {
+            background-color: $color-grey-light-2;
+        }
     }
 }
 
@@ -239,5 +252,129 @@
         font-weight: 400;
         font-size: 1.8rem;
         color: $color-font-dark-2;
+    }
+}
+
+// Destinations section
+.section-destinations {
+    padding-top: 17rem;
+    padding-bottom: 8rem;
+
+    text-align: center;
+}
+
+// Section headings
+.section-heading {
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 30px;
+    color: $color-font-dark;
+}
+
+.section-subheading {
+    font-weight: 400;
+    font-size: 1.6rem;
+    color: $color-font-dark-2;
+}
+
+// Destinations
+.destinations {
+
+    &__row {
+        display: flex;
+        flex-flow: row wrap;
+
+        &:not(:last-child) {
+            margin-bottom: 3rem;
+        }
+    }
+
+}
+
+.destination {
+    flex: 0 0 37rem;
+
+    position: relative;
+
+    &--wide {
+        flex: 0 0 77rem;
+    }
+
+    &:not(:last-child) {
+        margin-right: 3rem;
+    }
+
+    &__figure {
+        position: relative;
+        background-image: linear-gradient(to bottom, transparent 0%, transparent 50%, rgba(#000, .9)),
+                          linear-gradient(#000, #000);
+
+        overflow: hidden;
+        border-radius: 6px;
+    }
+
+    &__figure:hover &__img {
+        transform: scale(1.01);
+    }
+
+    &__img {
+        display: block;
+        width: 100%;
+        opacity: 0.8;
+
+        transform: scale(1.05);
+        transition: transform .4s ease;
+    }
+
+    &__caption {
+        position: absolute;
+        bottom: 2.5rem;
+        left: 3.5rem;
+
+        text-align: left;
+        font-weight: 400;
+        color: #fff;
+    }
+
+    &__place {
+        font-size: 3rem;
+        margin-bottom: .3rem;
+    }
+
+    &__country {
+        font-size: 2rem;
+    }
+
+    &__boats-count {
+        position: absolute;
+        top: 2rem;
+        left: 3rem;
+        padding: .8rem 1.4rem;
+
+        background-color: $color-red;
+        border-radius: 5px;
+        transition: background-color .2s ease;
+
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 700;
+        font-size: 1.6rem;
+        color: #fff;
+
+        display: flex;
+        align-items: center;
+
+        &::before {
+            content: '';
+
+            width: 1.6rem;
+            height: 1.6rem;
+            margin-right: 1.2rem;
+
+            background: url('../img/icons/icon-boat.svg') no-repeat center / cover;
+        }
+
+        &:hover {
+            background-color: darken($color-red, 3%);
+        }
     }
 }
