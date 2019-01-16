@@ -12,3 +12,12 @@ $color-footer-bg: #404040;
 
 // Other
 $figure-shadow: linear-gradient(to bottom, transparent 0%, transparent 60%, #000), linear-gradient(#000, #000);
+
+// Breakpoints for media queries
+$bp-largest: 93.75em;
+$bp-large: 75em;
+$bp-medium: 65.625em;
+$bp-small: 56.25em;
+$bp-smallest: 46.875em;
+
+$bp-mobile: 37.5em;
